@@ -1,0 +1,11 @@
+# Workspace WARI
+
+- **CONFIRMADO — distribución vigente, decisión del equipo:** WARI Agents es plataforma independiente en <WARI-APP>/wari-agents/, hermana de wari-fortalecimiento/ y worktrees/. La distribución física, incluida una compresión manual de la carpeta, es externa a WARI Agents. No requiere una rama ni un commit del Git WARI para funcionar. Fuente: decisiones de arquitectura aprobadas y conservadas en v0.3.
+- **CONFIRMADO — límites de repositorio:** `<WARI-APP>` es solo una carpeta contenedora y no es un repositorio. `wari-fortalecimiento/` es el repositorio existente de la aplicación. `wari-agents/` es el único repositorio nuevo que se creará. `worktrees/` aloja worktrees vinculados al Git de `wari-fortalecimiento`; no son repositorios nuevos o independientes. `.idea/` es metadata local del IDE y no representa un repositorio.
+- **CONFIRMADO — identidad HU y workspace:** cada HU trabaja solo en un worktree Git registrado cuya rama activa coincide exactamente con el nombre acordado: <HU> por defecto o <BRANCH> dado explícitamente. Su `state.json`, registro de tareas, input y output pertenecen a <worktree>/workspace/<HU>/ y quedan locales/no versionados. La plataforma compartida es un repositorio independiente. `init` del Runner aplica la exclusión Git local genérica `/workspace/*/` al Git WARI, sin hardcodear HUs. Fuente: decisiones del desarrollador vigentes en v0.3.
+- **CONFIRMADO — nombres conocidos:** wari-app, wari-common y wari-cavaliWeb aparecen como componentes posibles en context/WARI-CONTEXT.md. Su presencia, responsabilidad y versión deben verificarse en código antes de afirmar impacto concreto.
+- **CONFIRMADO — repositorio remoto WARI indicado por el desarrollador:** https://github.com/bvlperu/wari-fortalecimiento. El Git de WARI Agents no comparte origen, ramas ni historial con ese repositorio.
+- **CONFIRMADO — repositorio remoto WARI Agents:** https://github.com/faviofloresolaza/wari-agents.git, con rama principal `main`. Es el único repositorio nuevo de esta iniciativa.
+- **PENDIENTE DE VALIDACIÓN:** mapa completo de módulos, dependencias, tecnologías por módulo y procedimientos de build. No deducirlos de la lista general Java/Spring/Hibernate/Struts/Oracle/Maven del contexto.
+
+Usar esta ficha para orientar una búsqueda; leer únicamente el módulo o fragmento que responda a la solicitud.

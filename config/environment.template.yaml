@@ -1,0 +1,59 @@
+schema_version: 1
+machine:
+  workspace_root: "<ABSOLUTE_WORKSPACE_PATH>"
+  timezone: "<IANA_TIMEZONE>"
+  locale: "<LOCALE>"
+  default_encoding: "<ENCODING>"
+
+repositories:
+  agents:
+    path: "<WORKSPACE>/wari-agents"
+  application:
+    path: "<WORKSPACE>/wari-fortalecimiento"
+    remote: "origin"
+    base_branch: "produccion"
+  worktrees_root: "<WORKSPACE>/worktrees"
+
+application_context:
+  runtime: "IBM WebSphere local"
+  operational_scope: "context_only"
+
+work_tracking:
+  jira_cloud: true
+  confluence_cloud: true
+  allowed_project_keys: ["MEWARI", "DWARI"]
+  issue_pattern: "^(MEWARI|DWARI)-[0-9]+$"
+  credentials: "external_oauth_only"
+
+source_control:
+  provider: "github_enterprise"
+  server_url: "<GITHUB_ENTERPRISE_HTTPS_URL>"
+  credentials: "external_only"
+
+tools:
+  git:
+    executable: null
+    detected_version: null
+  runner_java:
+    java_home: null
+    executable: null
+    javac_executable: null
+    jar_executable: null
+    detected_version: null
+  application_jdk:
+    java_home: null
+    detected_version: null
+    project_compatibility_validated: false
+  maven:
+    executable: null
+    detected_version: null
+    settings_xml: null
+commands:
+  compile: { cwd: null, command: null, configured: false }
+
+restrictions:
+  allow_tool_installation: false
+  allow_path_fallbacks: false
+  allow_dependency_download_to_mask_failure: false
+  allow_direct_production_write: false
+  secrets_in_files: false

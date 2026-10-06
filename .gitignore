@@ -1,0 +1,52 @@
+# Salidas locales y temporales de esta plataforma.
+/runner/build/
+/workspace/
+/.cache/
+/.wari/
+/.aws/
+/.m2/
+__pycache__/
+*.pyc
+**/.DS_Store
+**/Thumbs.db
+**/Desktop.ini
+*.log
+*.tmp
+*.swp
+*.swo
+*.orig
+*.rej
+.env
+.env.*
+**/environment.local.yaml
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+
+# IDE: preferencias personales, índices y rutas de máquina.
+**/.idea/
+**/.vscode/
+**/.settings/
+*.iml
+*.ipr
+*.iws
+*.classpath
+*.project
+
+# Salidas de compilación. El JAR pequeño del Runner sí se versiona.
+**/target/
+**/out/
+*.class
+
+# Paquetes locales de distribución; la entrega oficial es el repositorio.
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+# Codex: solo config.toml del proyecto es compartible.
+/.codex/*
+!/.codex/config.toml
