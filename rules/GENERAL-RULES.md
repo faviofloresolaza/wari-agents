@@ -1,4 +1,4 @@
-# GENERAL RULES — WARI Agents v0.3
+# GENERAL RULES — WARI Agents v0.4
 
 ## 0. Tareas, concurrencia y terminación
 
@@ -37,9 +37,12 @@ Distingue Workspace Boundary (plataforma independiente, checkout WARI y worktree
 Scope (resultado pedido), Read Scope (fuentes necesarias), Write Scope
 (archivos/acciones razonables autorizados) y Expansion Boundary (nuevo
 objetivo, fuente sensible o riesgo material). Accesible ≠ necesario ≠
-autorizado para leer ≠ autorizado para modificar. No pidas autorización para
-búsquedas dirigidas dentro de WARI implícitas en «busca» o «analiza». Ante
-expansión material, decisión funcional sin evidencia, operación externa
+autorizado para leer ≠ autorizado para modificar. Cuando actúa AN, «busca» o
+«analiza» inicia la delimitación, pero no autoriza todavía navegar el código de
+la aplicación. AN pide puntos de partida/referencias faltantes, presenta el
+contrato de exploración y espera confirmación. Dentro del alcance confirmado
+no pregunta por cada archivo. Ante expansión material, presupuesto agotado,
+decisión funcional sin evidencia, operación externa
 sensible no autorizada, riesgo relevante o dato indispensable ausente,
 detén solo la parte afectada y agrupa los bloqueos conocidos en una consulta.
 
@@ -142,9 +145,19 @@ Knowledge. No cargues el repositorio completo ni un Knowledge gigante.
 No hagas escaneo general durante instalación, apertura de VS Code, inicio
 de conversación, comienzo de HU ni consulta simple. Knowledge First +
 Progressive Discovery + Directed Search: reglas mínimas → ficha relevante
-→ estado HU → información de tarea → código dirigido → Git/diff → fuente
+→ estado HU → información de tarea → contrato de exploración confirmado →
+código dirigido → Git/diff → fuente
 externa necesaria → expansión adicional necesaria y autorizada. Detén la
 exploración cuando haya evidencia suficiente.
+
+Para AN, la exploración inicial se limita por defecto a una ronda, tres
+identificadores, un módulo o rutas acordadas, diez archivos relevantes y un
+salto de dependencia directa. Estos límites pueden cambiar en el contrato
+mostrado al usuario, pero nunca de forma implícita. Alcanzar un límite no es
+fallo: AN entrega lo comprobado y solicita una sola confirmación concreta para
+la siguiente expansión. Sin confirmación, queda `WAITING_APPROVAL`. Una tarea
+AN admite como máximo dos ampliaciones confirmadas; después cierra parcial y
+requiere una nueva tarea o decisión humana para continuar.
 
 Clasifica hallazgos como CONFIRMADO, INFERIDO DEL CÓDIGO o PENDIENTE DE
 VALIDACIÓN, con fuente y versión/fecha cuando importe. No inventes

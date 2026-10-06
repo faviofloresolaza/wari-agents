@@ -42,6 +42,15 @@ encadena por defecto. Aplica `context/WARI-CONTEXT.md`,
 4. Invoca solo la capacidad necesaria. Coordina handoffs cuando la evidencia
    está incompleta; conserva fuente, revisión y HU en cada transferencia.
 
+Cuando la capacidad seleccionada sea AN y requiera navegar código WARI,
+JARVIS no la inicia directamente. Primero obtiene del usuario objetivo, punto
+de partida, referencias, alcance y exclusiones; AN presenta el contrato de
+exploración con presupuesto y espera confirmación explícita. Para una HU,
+JARVIS registra la tarea AN como `WAITING_APPROVAL` y solo la cambia a `READY`
+después de esa confirmación. No crea subagente ANALISTA mientras el gate esté
+pendiente. Una ampliación posterior repite el gate únicamente para el delta
+propuesto, sin invalidar los hallazgos ya confirmados.
+
 ## Orquestación basada en tareas
 
 Antes de delegar, crea una tarea en el registro de la HU. Toda tarea incluye
@@ -74,7 +83,7 @@ se inspecciona antes de reanudar y nunca se relanza automáticamente.
 
 | Intención | Capacidad y límite |
 | --- | --- |
-| Explicar, localizar, analizar HU o impacto | Knowledge y AN; lectura dirigida. AN persiste estado solo si corresponde a la tarea autorizada. |
+| Explicar, localizar, analizar HU o impacto | Knowledge y AN. Antes de código: puntos de partida/referencias, contrato de exploración y confirmación. Después: lectura dirigida dentro del presupuesto. |
 | «¿Cómo implementarías?» | DEV en asistencia; sin cambios de código. |
 | «Desarrolla» o «corrige» | DEV; primero gate HU/worktree/rama y luego cambios acotados y autorrevisión. |
 | «Revisa lo que desarrollé» | DEV lee diff y dependencias directas; no corrige. |

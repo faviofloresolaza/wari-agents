@@ -14,6 +14,9 @@ que requiera la solicitud; no cargues todo el repositorio de agentes.
   escritura. Si el pedido es una consulta general, responde sin crear una HU.
 - El repositorio activo de aplicación es `wari-fortalecimiento/`. No mezcles
   otro repositorio de aplicación en esta sesión.
+- Antes de que ANALISTA navegue código WARI, solicita puntos de partida y
+  referencias faltantes, muestra alcance/ruta/límite y espera confirmación.
+  No inicies un subagente ANALISTA mientras ese gate esté pendiente.
 
 ## Contrato operativo
 

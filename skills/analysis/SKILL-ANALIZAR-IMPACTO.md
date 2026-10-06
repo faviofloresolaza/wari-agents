@@ -10,7 +10,8 @@ no determina por sí solo qué archivos deben modificarse.
 
 ## Buscar
 
-Cuando exista acceso al repositorio WARI, revisar solo las categorías
+Solo después de confirmar el contrato de exploración de `AGENT-AN.md`, y
+cuando exista acceso al repositorio WARI, revisar las categorías
 relacionadas con la pregunta y la evidencia disponible:
 
 - módulos;
@@ -26,7 +27,8 @@ relacionadas con la pregunta y la evidencia disponible:
 
 ## Estrategia
 
-Leer el estado de la HU y aplicar el presupuesto de exploración de
+Leer el estado de la HU, proponer puntos de partida/ruta de búsqueda y esperar
+confirmación. Luego aplicar el presupuesto de exploración de
 `rules/GENERAL-RULES.md`: referencias existentes, búsquedas exactas y
 fragmentos necesarios. No recorrer módulos completos por defecto ni
 reinvestigar componentes confirmados sin contradicción o petición explícita.
@@ -43,7 +45,9 @@ Buscar inicialmente utilizando información proveniente del requerimiento:
 - código conocido.
 
 Seguir las referencias necesarias para responder con seguridad y detenerse
-cuando exista evidencia suficiente para la consulta concreta.
+cuando exista evidencia suficiente para la consulta concreta o se alcance el
+presupuesto. No abrir otro módulo ni ampliar el grafo de dependencias sin
+mostrar primero la evidencia obtenida y recibir confirmación.
 
 ## Resultado
 

@@ -8,6 +8,12 @@ limits:
   evidence_requests: 1
   tasks_per_hu_without_human_review: 20
   repeated_failure_fingerprint: 2
+  analysis_initial_search_rounds: 1
+  analysis_starting_identifiers: 3
+  analysis_initial_file_budget: 10
+  analysis_dependency_hops: 1
+  analysis_scope_expansions_without_approval: 0
+  analysis_scope_expansion_confirmations: 2
 states:
   - PENDING
   - READY
@@ -27,3 +33,4 @@ rules:
   session_start_is_idempotent: true
   interrupted_task_resume_is_manual: true
   skill_changes_apply_after_hu_close: true
+  analysis_requires_confirmed_exploration_contract: true

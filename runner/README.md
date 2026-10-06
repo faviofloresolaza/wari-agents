@@ -1,8 +1,10 @@
 # WARI Agents Runner v0.3
 
 Java 21, CLI local, sin servidor, base de datos ni dependencias externas.
-El JAR en este directorio se recompila con `bin/build-runner.sh` o
-`bin\build-runner.cmd`. No contiene WARI ni credenciales.
+El JAR en este directorio se recompila de forma reproducible con
+`bin/build-runner.sh` o `bin\build-runner.cmd`. No contiene WARI ni
+credenciales; las entradas usan una fecha fija para evitar cambios binarios
+cuando las clases no cambian.
 
 El Runner determina `<WARI-APP>` como padre de `wari-agents/`; consulta
 únicamente metadatos Git locales y archivos de la HU seleccionada.

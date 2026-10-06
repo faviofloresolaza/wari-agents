@@ -1,4 +1,4 @@
-# WARI Agents v0.3 — estado de producto
+# WARI Agents v0.4 — estado de producto
 
 WARI Agents reside en `<WARI-APP>/wari-agents/`, independiente y hermano
 de `wari-fortalecimiento/` y `worktrees/`. No requiere una rama, commit,
@@ -11,6 +11,9 @@ JARVIS coordina AN, DEV, QA, DOC e INT según intención. Knowledge First,
 Progressive Discovery y Context Compaction reducen contexto. READ ≠ WRITE,
 capacidad técnica ≠ autorización, destino de PR explícito, DOC evidencia
 → documentación y Production Boundary absoluto permanecen vigentes.
+Desde v0.4, AN debe acordar con el usuario un contrato de exploración antes de
+navegar código WARI. La tarea espera confirmación con presupuesto explícito;
+las ampliaciones no son automáticas y tienen límite por tarea.
 
 El Runner Java 21 valida la identidad HU ↔ rama acordada ↔ worktree Git
 registrado ↔ workspace local. `state.json` es mecánico y por HU;
@@ -29,10 +32,12 @@ La compilación y 41 pruebas deterministas del Runner pasaron en Windows. Los
 seis skills WARI y sus seis entrypoints repo-scoped pasaron
 `quick_validate.py`; el instalador los sincroniza de forma idempotente bajo
 `.codex/skills/`. El JDK de aplicación y Maven ya están declarados localmente.
+El build del Runner es reproducible: recompilaciones sin cambios conservan el
+SHA-256 del JAR versionado.
 No existen comandos locales de pruebas ni empaquetado y WebSphere es solo
 contexto, fuera del alcance operativo de los agentes. La compilación local usa
 Maven `clean compile` y el chequeo del ambiente no tiene pendientes.
-La certificación conversacional con Codex en v0.3 y una segunda máquina sigue
+La certificación conversacional con Codex en v0.4 y una segunda máquina sigue
 pendiente. Una sesión efímera Codex
 READ fue bloqueada por revisión automática debido al posible envío de
 contenido del repositorio al proveedor externo; no se reintentó. Cualquier

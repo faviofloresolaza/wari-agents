@@ -34,6 +34,6 @@ $sources = @(
 & $javac '--release' '21' '-d' $classes @sources
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 $output = Join-Path $agentsRoot 'runner\wari-agents-runner.jar'
-& $jar '--create' '--file' $output '--main-class' 'wari.agents.Runner' '-C' $classes '.'
+& $jar '--create' '--file' $output '--date=2000-01-01T00:00:00Z' '--main-class' 'wari.agents.Runner' '-C' $classes '.'
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 Write-Host "Runner compilado: $output"
