@@ -88,6 +88,13 @@ GitHub/API/CLI evade Production Boundary. Jenkins/WebSphere es únicamente
 contexto de ejecución de la aplicación: INT no lo configura, inicia, detiene
 ni usa para desplegar. No es una integración pendiente. Nunca persistir secretos.
 
+Para WRITE documental en Confluence, INT exige el handoff de DOC y aplica un
+gate justo antes de ejecutar: muestra nombre/título, tipo de operación, sitio,
+espacio, ruta/página padre, URL/page ID final y versión del contenido. Espera
+confirmación explícita de un solo uso. Una confirmación anterior, una ruta
+inferida o «genera el documento» no autorizan publicar. Cualquier cambio de
+nombre, contenido, operación o destino invalida la confirmación.
+
 Si hay actividad real de integración, mantener
 `<worktree>/workspace/<HU>/output/INTEGRATION-STATE.md` con HU,
 objetivo, evidencia

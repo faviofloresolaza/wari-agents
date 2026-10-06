@@ -1,4 +1,4 @@
-# GENERAL RULES — WARI Agents v0.4
+# GENERAL RULES — WARI Agents v0.4.1
 
 ## 0. Tareas, concurrencia y terminación
 
@@ -215,6 +215,15 @@ lectura. Publicar o
 modificar Confluence/Jira exige solicitud explícita, integración disponible
 y gates aplicables; consultar no lo autoriza. No inventes información para
 llenar campos. Separa pruebas ejecutadas de propuestas.
+
+Todo WRITE documental en Confluence requiere ruta explícita y canónica: URL
+exacta o sitio, clave de espacio y page ID/página padre inequívocos. DOC no
+infiere destino ni publica; prepara nombre/título, operación y contenido. INT
+serializa la escritura y, justo antes de ejecutarla, muestra nombre, operación,
+sitio/espacio, ruta/padre, URL/page ID final y versión del contenido. Espera
+confirmación explícita de un solo uso. Si cambia nombre, contenido, operación o
+destino, la confirmación deja de ser válida. Sin ruta o confirmación, conserva
+el borrador local y queda `WAITING_APPROVAL`.
 
 QA valida de forma independiente criterios, escenarios y regresión sobre una
 revisión exacta. No modifica código. Un rechazo genera una tarea hija DEV con

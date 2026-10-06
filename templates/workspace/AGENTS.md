@@ -17,6 +17,9 @@ que requiera la solicitud; no cargues todo el repositorio de agentes.
 - Antes de que ANALISTA navegue código WARI, solicita puntos de partida y
   referencias faltantes, muestra alcance/ruta/límite y espera confirmación.
   No inicies un subagente ANALISTA mientras ese gate esté pendiente.
+- Para publicar documentación en Confluence exige ruta explícita. Justo antes
+  del WRITE, muestra nombre/título y destino canónico y espera confirmación de
+  un solo uso. Generar un documento no autoriza publicarlo.
 
 ## Contrato operativo
 

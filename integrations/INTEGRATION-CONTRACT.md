@@ -18,7 +18,11 @@ conector futuro cumplen el mismo contrato de disponibilidad y autorización.
 4. Para Git mutante, aplicar gate HU ↔ worktree ↔ rama justo antes de la
    operación. Para PR, exigir destino explícito actual. Production Boundary
    bloquea acciones directas e indirectas sin excepción.
-5. Ejecutar solo la herramienta pertinente. Guardar referencia, fecha y
+5. Para Confluence WRITE, exigir nombre/título exacto, operación, sitio,
+   espacio, ruta o página padre y URL/page ID canónico. Mostrar el destino final
+   y obtener confirmación explícita inmediatamente antes de escribir. La
+   confirmación es de un solo uso y se invalida si cambia contenido o destino.
+6. Ejecutar solo la herramienta pertinente. Guardar referencia, fecha y
    resultado sin copiar indiscriminadamente contenido externo ni secretos.
    Si falla, continuar con fuentes disponibles cuando basten; señalar el
    dato bloqueado. Nunca simular PASS.
@@ -28,7 +32,7 @@ conector futuro cumplen el mismo contrato de disponibilidad y autorización.
 | Fuente | READ inicial | WRITE futuro |
 | --- | --- | --- |
 | Jira | HU, descripción, criterios y adjuntos pertinentes | Solo petición explícita, permiso y gate documental aplicable |
-| Confluence | Buscar/leer página relacionada y estándar | Solo petición explícita, revisión humana aplicable y permiso |
+| Confluence | Buscar/leer página relacionada y estándar | Solo con petición explícita, ruta canónica, nombre/operación visibles, revisión aplicable, permiso y confirmación final de un solo uso |
 | Git local | Worktrees, ramas, status, diff, commits e historial | Acción Git específicamente autorizada y gate de HU |
 | GitHub remoto | Ref/estado remoto, comparación y PR existente | PR/demás operación explícita, gate y destino permitido |
 | Jenkins/WAS | Contexto arquitectónico únicamente | Fuera de alcance; sin operaciones ni despliegues |

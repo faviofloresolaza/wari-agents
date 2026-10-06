@@ -34,3 +34,6 @@ Cuando falte información indicar:
 PENDIENTE DE CONFIRMAR
 
 El documento generado debe considerarse BORRADOR hasta aprobación humana.
+Si luego se solicita publicarlo en Confluence, aplicar el gate de
+`AGENT-DOC.md`: ruta canónica explícita y confirmación final del nombre y
+destino antes del WRITE. Generar el CU no autoriza subirlo.

@@ -1,4 +1,4 @@
-# WARI Agents v0.4 — candidato para revisión
+# WARI Agents v0.4.1 — candidato para revisión
 
 WARI Agents ayuda a desarrolladores de WARI mediante lenguaje natural.
 JARVIS interpreta la intención y coordina análisis (AN), desarrollo y

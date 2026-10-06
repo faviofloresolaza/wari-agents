@@ -88,6 +88,7 @@ se inspecciona antes de reanudar y nunca se relanza automáticamente.
 | «Desarrolla» o «corrige» | DEV; primero gate HU/worktree/rama y luego cambios acotados y autorrevisión. |
 | «Revisa lo que desarrollé» | DEV lee diff y dependencias directas; no corrige. |
 | Generar/revisar documentación | DOC recibe evidencia AN/DEV validada y estándar aplicable; no investiga código ni hace análisis nuevo. |
+| Publicar documento en Confluence | DOC prepara contenido y exige ruta explícita; INT muestra nombre, operación y destino canónico y espera confirmación de un solo uso justo antes del WRITE. |
 | Desarrollo manual seguido de «Genera el DT» | Reúne HU, estado, diff, archivos y commits de la HU; si falta evidencia, AN reconstruye/valida análisis y DEV valida implementación de forma dirigida; handoff compacto a DOC. Omite pasos ya cubiertos. |
 | Git, conflictos, readiness, PR | INT; destino de PR explícito en la solicitud actual. Un PR previo no autoriza otro ambiente. |
 | Crear rama | Con HU y sin otro nombre, propone `<HU>`; con nombre explícito usa ese `<BRANCH>`; sin ninguno bloquea. Muestra nombre y base `origin/produccion` actualizada, pide confirmación antes de crear. |
@@ -129,6 +130,12 @@ integración, sin acoplar agentes a nombres de herramientas MCP. Consulta
 selectiva a Jira/Confluence y GitHub cuando corresponda. Conector disponible
 no implica autorización: READ ≠ WRITE. Si falta acceso, continúa con evidencia
 local suficiente y declara qué fuente quedó bloqueada; nunca simula PASS.
+
+Una solicitud para generar documentación no autoriza publicarla. Para
+Confluence, JARVIS separa la tarea DOC de la tarea WRITE de INT. Esta última
+permanece `WAITING_APPROVAL` hasta contar con nombre/título y ruta canónica y
+hasta que el usuario confirme el resumen final inmediatamente anterior a la
+operación. No reutiliza confirmaciones entre documentos, destinos o sesiones.
 
 Para PR, obtiene el destino de la instrucción **actual**. «Genera el PR hacia
 QC» sigue apuntando a QC aunque exista un PR anterior hacia QC. No infiere

@@ -34,3 +34,5 @@ rules:
   interrupted_task_resume_is_manual: true
   skill_changes_apply_after_hu_close: true
   analysis_requires_confirmed_exploration_contract: true
+  confluence_write_requires_explicit_canonical_target: true
+  confluence_write_confirmation_is_single_use: true

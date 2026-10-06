@@ -83,3 +83,6 @@ Cuando un dato no esté disponible utilizar:
 PENDIENTE DE CONFIRMAR
 
 El documento generado inicialmente debe considerarse BORRADOR.
+Si luego se solicita publicarlo en Confluence, aplicar el gate de
+`AGENT-DOC.md`: ruta canónica explícita y confirmación final del nombre y
+destino antes del WRITE. Generar el DT no autoriza subirlo.
